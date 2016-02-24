@@ -1,0 +1,37 @@
+<h1>Listing Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Size</th>
+      <th>URL</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @files.each do |file| %>
+      <tr>
+        <td><%= file.id %></td>
+        <td><%= file.data.identifier %></td>
+        <td><%= file.data.size %></td>
+        <td><%= link_to 'url', root_url + file.data.url %></td>
+        <td><%= link_to 'Destroy', delete_file_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= form_tag(upload_file_path, method: :post, multipart: true) do %>
+	<%= label(:container, :files, 'Files') %>
+	<%= file_field(:container, :files, :multiple => true) %>
+
+	<%= submit_tag("Upload") %>
+<% end %>
+
+<br>
+
+<%= link_to 'Log out', logout_path %>
