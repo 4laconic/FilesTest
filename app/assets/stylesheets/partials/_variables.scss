@@ -1,0 +1,30 @@
+// Root unit that will define all other sizes
+$main-font-size: 16px;
+
+$red: #FF0000;
+$white: #FFFFFF;
+$gray: #808080;
+$pink: #FFCBDB;
+$brown: #964B00;
+$orange: #FF7F00;
+$yellow: #FFFF00;
+$green: #00FF00;
+$cyan: #00FFFF;
+$blue: #0000FF;
+$violet: #7F00FF;
+$black: #000000;
+
+$body-bg: lighten(#c1bdba,17%);
+$form-bg: #13232f;
+
+$main: #1ab188;
+$main-light: lighten($main, 5%);
+$main-dark: darken($main, 5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;

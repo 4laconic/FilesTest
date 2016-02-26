@@ -1,0 +1,22 @@
+@import "../partials/variables";
+@import "../partials/layout";
+
+html {
+	overflow-y: scroll; 
+}
+
+body {
+	background: $body-bg;
+	font-family: 'Titillium Web', sans-serif;
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: rgba($white,.5);
+}
+
+@import "../scss/authentication.scss";
+@import "../scss/container.scss";
+

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/files', to: 'containers#index', as: 'files'
   post '/files/upload', to: 'containers#upload', as: 'upload_file'
-  delete '/files/delete', to: 'containers#delete', as: 'delete_file'
+  delete '/files/delete/:id/', to: 'containers#delete', as: 'delete_file'
   get '/uploads/files/:id/:filename', to: 'containers#download', as: 'download_file', 
     :constraints => { :filename => /[-\w+\.]+/ }
 

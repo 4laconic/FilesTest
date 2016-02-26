@@ -1,0 +1,190 @@
+/* line 17, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* line 21, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 25, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+body {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* line 31, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome a {
+  text-decoration: none;
+  color: #1ab188;
+  transition: .5s ease;
+}
+/* line 35, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome a:hover {
+  color: #179b77;
+}
+/* line 40, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+/* line 49, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .b-welcome__tab-group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+/* line 53, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .b-welcome__tab-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 58, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .b-welcome__tab-group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+}
+/* line 70, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .b-welcome__tab-group li a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+/* line 75, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .b-welcome__tab-group .active a {
+  background: #1ab188;
+  color: #ffffff;
+}
+/* line 81, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .b-welcome__tab-content > div:last-child {
+  display: none;
+}
+/* line 86, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+/* line 93, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome label {
+  position: absolute;
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+/* line 102, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome label .req {
+  margin: 2px;
+  color: #1ab188;
+}
+/* line 108, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome label.active {
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+/* line 112, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome label.active .req {
+  opacity: 0;
+}
+/* line 117, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome label.highlight {
+  color: #ffffff;
+}
+/* line 121, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome input, .b-welcome textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+/* line 133, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome input:focus, .b-welcome textarea:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+/* line 139, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome textarea {
+  border: 2px solid #a0b3b0;
+  resize: vertical;
+}
+/* line 144, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+/* line 150, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .top-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 156, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .top-row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+/* line 160, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .top-row > div:last-child {
+  margin: 0;
+}
+/* line 166, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .button {
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+/* line 179, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .button:hover, .b-welcome .button:focus {
+  background: #179b77;
+}
+/* line 184, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .button-block {
+  display: block;
+  width: 100%;
+}
+/* line 189, /home/iwsyhgia/workspace/FilesTest/app/assets/stylesheets/scss/authentication.scss */
+.b-welcome .forgot {
+  margin-top: -20px;
+  text-align: right;
+}
+/*
+
+*/
+

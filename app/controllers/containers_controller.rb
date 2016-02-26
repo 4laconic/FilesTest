@@ -3,19 +3,23 @@ class ContainersController < ApplicationController
 	
 
 	def index
-		@files = Container.all
+		@email = Authentication.find(session[:authentication_id]).email
+		@containers = Container.where( :authentication_id => session[:authentication_id] )
 	end
 
 	def delete
-
+		Container.find(params[:id]).destroy;
+		redirect_to files_path
 	end
 
 	def upload
-		for file in params[:container][:files]
+		for item in params[:container][:files]
 			f = Container.new
-			f.data = file
+			f.file = item
+			f.authentication_id = session[:authentication_id]
 			f.save!
 		end
+		redirect_to files_path
 	end
 
 	def download
@@ -27,9 +31,9 @@ class ContainersController < ApplicationController
 
 	private 
 		def check_authentication
-			if session[:current_user_id] == nil
-	    		redirect_to root_path
-	    	end
+			if session[:authentication_id] == nil
+				redirect_to root_path
+			end
 		end
 
 

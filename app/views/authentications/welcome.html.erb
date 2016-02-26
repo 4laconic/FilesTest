@@ -1,56 +1,55 @@
-<%= content_tag :div, class: 'form' do %>
+<%= content_tag :div, class: 'welcome-form' do %>
 	<ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
-    </ul>
+		<li class="tab"><a href="#signup">Sign Up</a></li>
+		<li class="tab active"><a href="#login">Log In</a></li>
+	</ul>
 
 	<div class="tab-content">
+		<div id="login">
+			<h1>Welcome Back!</h1>
+			<%= form_for(:authentication, url: login_path, method: "post") do |f| %> 
+				<div class="field-wrap">
+					<%= f.label :email do %>
+						Email Address<span class="req">*</span>
+					<% end %>
+					<%= f.text_field :email, :autocomplete => :on, :required => :true %>
+				</div>
 
-		<div id="signup"> 
-			<h1>Sign Up for Free</h1>
-			<%= form_for(:authentication, url: signup_path, method: "post") do |f| %> 
-		        <div class="field-wrap">
-			        <%= f.label :email do %>
-			        	Email Address<span class="req">*</span>
-			        <% end %>
-			        <%= f.text_field :email, :autocomplete => :on, :required => :true %>
-		        </div>
-		        
-		        <div class="field-wrap">
-		        	<%= f.label :password do %>
-		        		Password<span class="req">*</span>
-		        	<% end %>
-		        	<%= f.password_field :password, :autocomplete => :off, :required => :true %>
-		        </div>
-
-	            <div class="field-wrap">
-	              <%= f.label :password_confirm do %>
-		        		Confirm Password<span class="req">*</span>
-		        	<% end %>
-		        	<%= f.password_field :password_confirm, :autocomplete => :off, :required => :true %>
-	            </div>		        
-		        <button type="submit" class="button button-block"/>Get Started</button>
+				<div class="field-wrap">
+					<%= f.label :password do %>
+						Password<span class="req">*</span>
+					<% end %>
+					<%= f.password_field :password, :autocomplete => :off, :required => :true %>
+				</div>
+				<button type="submit" class="button button-block"/>Log In</button>
 			<% end %>
 		</div>
 
-		<div id="login">   
-		  <h1>Welcome Back!</h1>		  
-		  <%= form_for(:authentication, url: login_path, method: "post") do |f| %> 
-	          	<div class="field-wrap">
-		  	        <%= f.label :email do %>
-		  	        	Email Address<span class="req">*</span>
-		  	        <% end %>
-		  	        <%= f.text_field :email, :autocomplete => :on, :required => :true %>
-	          	</div>
-		  
-		  		<div class="field-wrap">
-		        	<%= f.label :password do %>
-		        		Password<span class="req">*</span>
-		        	<% end %>
-		        	<%= f.password_field :password, :autocomplete => :off, :required => :true %>
-	        	</div>			  
-			  	<button type="submit" class="button button-block"/>Log In</button>		  
-		  <% end %>
+		<div id="signup"> 
+			<h1>Sign Up</h1>
+			<%= form_for(:authentication, url: signup_path, method: "post") do |f| %> 
+				<div class="field-wrap">
+					<%= f.label :email do %>
+						Email Address<span class="req">*</span>
+					<% end %>
+					<%= f.text_field :email, :autocomplete => :on, :required => :true %>
+				</div>
+				
+				<div class="field-wrap">
+					<%= f.label :password do %>
+						Password<span class="req">*</span>
+					<% end %>
+					<%= f.password_field :password, :autocomplete => :off, :required => :true %>
+				</div>
+
+				<div class="field-wrap">
+					<%= f.label :password_confirm do %>
+						Confirm Password<span class="req">*</span>
+					<% end %>
+					<%= f.password_field :password_confirm, :autocomplete => :off, :required => :true %>
+				</div>
+				<button type="submit" class="button button-block"/>Get Started</button>
+			<% end %>
 		</div>
 	</div>
 <% end %>

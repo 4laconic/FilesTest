@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(document).ready(function() {
-	$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+	$('.welcome-form').find('input, textarea').on('keyup blur focus', function (e) {
 	  
 	  var $this = $(this),
 		  label = $this.prev('label');

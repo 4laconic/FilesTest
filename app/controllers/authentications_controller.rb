@@ -1,12 +1,12 @@
 class AuthenticationsController < ApplicationController
 	before_action :check_authentication, only: [:welcome, :login]
 
-	def welcome 
+	def welcome
 
 	end
 
 	def login
-		@params = login_params		
+		@params = login_params
 		@auth = Authentication.find_by(email: @params[:email])
 		result = :failure
 		if !@auth.nil?
@@ -14,11 +14,11 @@ class AuthenticationsController < ApplicationController
 			if (encrypted_password == @auth.encrypted_password)
 				result = :success
 			end
-		end		
-		case result			
+		end
+		case result
 			when :success
-				session[:current_user_id] = @auth.id
-				flash[:success] = 'You are successfully logged'
+				session[:authentication_id] = @auth.id.to_s
+				redirect_to files_path
 			when :failure
 				flash[:failure] = "You aren't logged"
 		end
@@ -35,13 +35,8 @@ class AuthenticationsController < ApplicationController
 			@auth = Authentication.new 	email: @params[:email], 
 										password: @params[:password]
 			if @auth.save 
-				session[:current_user_id] = @auth.id
-				flash[:success] = 'You are successfully signup'
-				response.header['Location'] = files_url()
-				response.header['URL'] = files_url()
-				response.header['Refresh'] = '2'
-				
-
+				session[:authentication_id] = @auth.id.to_s
+				redirect_to files_path
 			else
 				flash[:failure] = "You aren't signup"
 			end
@@ -58,7 +53,7 @@ class AuthenticationsController < ApplicationController
 	    end
 
 	    def check_authentication
-	    	if session[:current_user_id] != nil
+	    	if session[:authentication_id] != nil
 	    		redirect_to files_path
 	    	end
 	    end

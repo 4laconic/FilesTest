@@ -1,0 +1,32 @@
+production:
+  sessions:
+    default:
+      database: files_storage
+      uri: 'mongodb://laconic:l23785614c@ds043497.mongolab.com:43497/files_storage'
+      hosts:
+        - localhost:27017
+      options:
+  options:
+
+development:
+  sessions:
+    default:
+      database: files_storage_test
+      uri: 'mongodb://laconic:l23785614c@ds043497.mongolab.com:43497/files_storage_development'
+      options:
+        consistency: :strong
+        max_retries: 30
+        retry_interval: 1
+        timeout: 15
+
+
+test:
+  sessions:
+    default:
+      database: files_storage_development
+      hosts:
+        - localhost:27017
+      options:
+        read: primary
+        max_retries: 1
+        retry_interval: 0

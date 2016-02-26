@@ -4,12 +4,10 @@ gem 'faker'
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
-gem 'mongoid', '~> 4.0.2'
+gem 'mongoid',  '>= 5.0'
 gem 'bson_ext'   , '~> 1.3'
 gem 'compass-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt' 
-#gem 'rack-gridfs', :git => 'https://github.com/skinandbones/rack-gridfs.git' \
-#                 , :require => 'rack/gridfs'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

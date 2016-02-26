@@ -9,7 +9,7 @@
 Container.delete_all
 Authentication.delete_all
 
-Container.create(data: File.open('task.txt'))
+#Container.create(data: File.open('task.txt'))
 Authentication.create(email: '4laconic@gmail.com', password: '23785614')
 
 5.times do

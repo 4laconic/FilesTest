@@ -1,0 +1,124 @@
+$width-content: 800px;
+$textColor : darken($white, 19%);
+
+nav {
+	padding: 5px;
+	margin: 0px;
+	text-align: right;
+	border-bottom: 1px solid white;
+	background: $form-bg;
+	box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+	color: rgba($white,0.85);
+	text-align: right;
+	.email {
+		display: inline-block;
+	}
+
+	.logout {
+		display: inline-block;
+	}
+}
+
+a {
+	transition: all 0.5s ease-in-out;
+	color: rgba($white,0.85);
+	&:hover {
+		color: $white;
+		text-shadow: 0px 0px 3px white;
+	}
+}
+
+
+.containers-wrapper {
+	margin-top: 10px;
+	color: rgba($white,0.85);
+	table {
+		text-align: center;
+		background: $form-bg;
+		border: 1px solid white;
+		border-radius: $br;
+		margin: auto;
+		width: $width-content;
+		box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+
+		caption {
+			color: black;
+			margin: 10px 0px 10px 0px;
+			text-align: left;
+			font-family: Verdana;
+			font-weight: bold;
+		}
+
+		td {
+			padding: 5px;
+		}
+	}
+
+	.upload-form-wrapper {
+		margin-top: 10px;
+		text-align: center;
+
+		form {
+			padding: 13px 10px 10px 10px;
+			border: 1px solid white;
+			border-radius: $br;
+			box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+			background: $form-bg;
+			margin: auto;
+			width: $width-content;
+
+			.inputfile {
+			    width: 0.1px;
+			    height: 0.1px;
+			    opacity: 0;
+			    overflow: hidden;
+			    position: absolute;
+			    z-index: -1;
+			}
+
+			.inputfile + label {
+			    max-width: 80%;
+			    font-size: 1.25rem;
+			    /* 20px */
+			    font-weight: 700;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			    cursor: pointer;
+			    display: inline-block;
+			    overflow: hidden;
+			    padding: 0.5rem 1.1rem;
+			    /* 10px 20px */
+			    color: #f1e5e6;
+			    background-color: $main;
+			    transition: background 0.5s ease-in-out;
+			    &:hover, &:focus {
+			      background: darken($main-dark,5%);
+			    }
+			}
+
+			.inputfile:focus + label,
+			.inputfile.has-focus + label {
+			    outline: 1px dotted #000;
+			    outline: -webkit-focus-ring-color auto 5px;
+			}
+
+			.inputfile + label * {
+			    /* pointer-events: none; */
+			    /* in case of FastClick lib use */
+			}
+
+			.inputfile + label svg {
+			    width: 1em;
+			    height: 1em;
+			    vertical-align: middle;
+			    fill: currentColor;
+			    margin-top: -0.25em;
+			    /* 4px */
+			    margin-right: 0.25em;
+			    /* 4px */
+			}
+
+
+		}
+	} 
+}
